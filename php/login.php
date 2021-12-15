@@ -1,11 +1,21 @@
 <?php
-
-$array_users = array("John" => "123", "Jan"  => "123");
+session_start();
+// array("John" => "123", "Jan"  => "123");
+$array_users = [
+    [
+        "name"=>"John",
+        "password"=>"123",
+        "rol"=>"encargado"
+    ],
+    [
+        "name"=>"Jan",
+        "password"=>"123",
+        "rol"=>"operario"
+    ]    
+];
 
 //$userDataArray = Array("JOH121280" => "John", "JAN020578" => "Jane") ;
 
-$username = $_SESSION['username'];
-$pwd = $_SESSION['pwd'];
 
 
 $username_entered;
@@ -34,7 +44,7 @@ if (isset($_POST['submit'])) {
 
 
 
-session_start();
+
 
 if(isset($_SESSION['username'])) { 
     $_SESSION['username'] = $_SESSION['username'] + 1; 
