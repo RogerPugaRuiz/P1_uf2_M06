@@ -82,6 +82,15 @@ hr{
     background-color: rgb(187, 37, 0);
 }
 
+.login-message{
+    background-color: rgba(17, 0, 255, 0.466);
+    color: white;
+    margin: 0;
+}
+.hidden{
+    display: none;
+}
+
 
 @media only screen and (max-width: 600px) {
     .login--container{

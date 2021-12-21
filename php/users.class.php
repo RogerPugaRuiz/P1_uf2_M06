@@ -34,13 +34,20 @@ class Users{
             "rol"=>$rol
         ];
     }
+
+    function validate_user(String $name, String $password):bool{
+        foreach ($this->array_users as $user){
+            if ($user["name"] == $name && $user["password"] == $password ){
+                 
+                return true;
+            }
+            // echo $user["name"];   
+            
+        }
+        return false;
+    }
 }
 
-
-$users = new Users();
-$users->add_user("roger","1234","operator");
-$user = $users->get_user("roger");
-var_dump($user);
 
 
 

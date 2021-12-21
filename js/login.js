@@ -3,16 +3,27 @@
 $("#submit").on("click", function () {
     let name = $("#name").val();
     let password = $("#password").val();
-    let data = {"name":name,"password":password}
+    let user = {"name":name,"password":password}
+    // console.log(data);
     $.ajax({
-        type: "post",
-        url: "php/login.php",
-        data: data,
+        data: JSON.stringify(user),
+        type: "POST",
         dataType: "json",
-        success: function (response) {
-            console.log("correct");
+        url: "php/login.php",
+    })
+     .done(function( data, textStatus, jqXHR ) {
+        if (data["idSession"]){
+            $(".login-message").slideUp(500);
+            $.cookie("idSession",user["name"]);
+        }else{
+            $(".login-message").slideDown(500);
         }
-    });
+     })
+     .fail(function( jqXHR, textStatus, errorThrown ) {
+         if ( console && console.log ) {
+             console.log( "La solicitud a fallado: " +  textStatus);
+         }
+    });2
 });
 $("#reset").on("click",function(){
     $("#name").val("");
