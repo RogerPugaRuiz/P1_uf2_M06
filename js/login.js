@@ -1,4 +1,5 @@
 // submit login form
+//$.cookie("session");
 $("#submit").on("click", function () {
     let name = $("#name").val();
     let password = $("#password").val();
@@ -17,7 +18,6 @@ $("#submit").on("click", function () {
         if (data["idSession"]){
             $(".login, .smoke-screen").fadeOut();
             $.cookie("idSession",user["name"]);
-            
         }else{
             $(".login-message").slideDown(500);
         }

@@ -1,6 +1,7 @@
 
 /**
  * Class to crete a new machine
+ * Type: A, B, C, D
  */
 class Machine{
     constructor (id, type, tail){

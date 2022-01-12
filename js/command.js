@@ -1,6 +1,9 @@
 
 /**
  * Class command that class create a diferent type of pece.
+ * type: A, B, C, D
+ * state: 0 -> pending , 1 -> machine 1 , 2 -> machine 2, 3 -> machine 3, 4 -> machine 4.
+ * position: order in list.
  */
 class Command{
     constructor (client_name, pece_name, type, quantity, state, position){
