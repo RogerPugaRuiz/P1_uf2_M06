@@ -1,3 +1,11 @@
+
+if ($.cookie('idSession') === undefined){
+
+}else{
+    $(".login, .smoke-screen").hide();
+    console.log("correct");
+}
+
 // submit login form
 //$.cookie("session");
 $("#submit").on("click", function () {
@@ -17,7 +25,7 @@ $("#submit").on("click", function () {
         // if session is correct
         if (data["idSession"]){
             $(".login, .smoke-screen").fadeOut();
-            $.cookie("idSession",user["name"]);
+            $.cookie("idSession",user["name"],{expires: 30});
         }else{
             $(".login-message").slideDown(500);
         }
