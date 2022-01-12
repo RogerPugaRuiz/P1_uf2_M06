@@ -13,8 +13,9 @@ $("#submit").on("click", function () {
     })
      .done(function( data, textStatus, jqXHR ) {
         if (data["idSession"]){
-            $(".login-message").slideUp(500);
+            $(".login, .smoke-screen").fadeOut();
             $.cookie("idSession",user["name"]);
+            
         }else{
             $(".login-message").slideDown(500);
         }

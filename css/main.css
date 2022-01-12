@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    background-image: url("../img/pexels-andrea-piacquadio-3851141.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-page{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 1000px;
+    z-index: 1;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 100px;
+}
+nav ul{
+    background-color: black;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+    color: rgb(199, 199, 199);
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    color: white;
+    border-bottom: 2px solid white;
+}
