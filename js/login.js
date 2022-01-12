@@ -1,10 +1,15 @@
 
+// check login
 
+
+
+// submit login form
 $("#submit").on("click", function () {
     let name = $("#name").val();
     let password = $("#password").val();
     let user = {"name":name,"password":password}
-    // console.log(data);
+    
+    // send user
     $.ajax({
         data: JSON.stringify(user),
         type: "POST",
@@ -12,6 +17,8 @@ $("#submit").on("click", function () {
         url: "php/login.php",
     })
      .done(function( data, textStatus, jqXHR ) {
+        
+        // if session is correct
         if (data["idSession"]){
             $(".login, .smoke-screen").fadeOut();
             $.cookie("idSession",user["name"]);
@@ -21,11 +28,13 @@ $("#submit").on("click", function () {
         }
      })
      .fail(function( jqXHR, textStatus, errorThrown ) {
-         if ( console && console.log ) {
-             console.log( "La solicitud a fallado: " +  textStatus);
-         }
+        if ( console && console.log ) {
+            console.log( "La solicitud a fallado: " +  textStatus);
+        }
     });2
 });
+
+// reset the form
 $("#reset").on("click",function(){
     $("#name").val("");
     $("#password").val("");
