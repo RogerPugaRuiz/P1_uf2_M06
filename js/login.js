@@ -1,8 +1,3 @@
-
-// check login
-
-
-
 // submit login form
 $("#submit").on("click", function () {
     let name = $("#name").val();
