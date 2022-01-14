@@ -8,13 +8,23 @@ body{
     position: relative;
     width: 70%;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.486);
+    background-color: rgba(70, 70, 70, 0.801);
     height: 1000px;
     z-index: 1;
     box-shadow: 2px 2px 2px black;
     margin-bottom: 100px;
 }
+nav{
+    padding: 0.5rem;
+}
+nav p{
+    display: inline;
+    color: white;
+}
 nav ul{
+    display: inline;
+}
+nav{
     background-color: black;
     text-align: center;
 }

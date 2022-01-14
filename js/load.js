@@ -23,21 +23,30 @@ if (typeof $.cookie('current_session') === 'undefined'){
 
 function load(commands, machines){
     load_commands(commands);
+    load_machines(machines);
 }
 
 function load_commands(commands){
     for (let index = 0; index < commands.length; index++) {
         const element = commands[index];
         let html_command = $("<div class='command'></div>");
+        let div = $("<div class='inline'></div>");
         html_command.append("<h3>" + element.client_name + "</h3>");
-        html_command.append("<p>" + element.pece_name + "</p>");
-        html_command.append("<p>" + element.quantity + "</p>");
-        html_command.append("<p>" + element.position + "</p>");
+        div.append("<p>" + element.pece_name + "</p>");
+        div.append("<p>" + element.quantity + "</p>");
+        div.append("<p class='pos'>" + element.position + "</p>");
+        html_command.append(div);
         $(".commands").append(html_command);
     }
 }
 
-function load_machines(){
-
+function load_machines(machines){
+    for (let index = 0; index < machines.length; index++) {
+        const element = machines[index];
+        let html_machines = $("<div class='machine'></div>");
+        html_machines.append("<p>" + element.type + "</p>");
+        html_machines.append("<p>" + element.tail + "</p>");
+        $(".machines").append(html_machines);
+    }
 }
    

@@ -3,7 +3,7 @@ if ($.cookie('idSession') === undefined){
 
 }else{
     $(".login, .smoke-screen").hide();
-    console.log("correct");
+    $(".welcome").text("Bienvenido " + $.cookie("idSession"));
 }
 
 // submit login form
@@ -26,6 +26,7 @@ $("#submit").on("click", function () {
         if (data["idSession"]){
             $(".login, .smoke-screen").fadeOut();
             $.cookie("idSession",user["name"],{expires: 30});
+            $(".welcome").text("Bienvenido " + $.cookie("idSession"));
         }else{
             $(".login-message").slideDown(500);
         }
