@@ -29,7 +29,7 @@ function load(commands, machines){
 function load_commands(commands){
     for (let index = 0; index < commands.length; index++) {
         const element = commands[index];
-        let html_command = $("<div class='command'></div>");
+        let html_command = $("<li class='command'></li>");
         let div = $("<div class='inline'></div>");
         html_command.append("<h3>" + element.client_name + "</h3>");
         div.append("<p>" + element.pece_name + "</p>");
@@ -43,9 +43,11 @@ function load_commands(commands){
 function load_machines(machines){
     for (let index = 0; index < machines.length; index++) {
         const element = machines[index];
-        let html_machines = $("<div class='machine'></div>");
+        let html_machines = $("<li class='machine'></li>");
+        let box = $("<ul class='box connectedSortable' id='sortable3'></ul>");
         html_machines.append("<p>" + element.type + "</p>");
         html_machines.append("<p>" + element.tail + "</p>");
+        html_machines.append(box);
         $(".machines").append(html_machines);
     }
 }
