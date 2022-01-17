@@ -54,3 +54,24 @@
     overflow: scroll;
 }
 
+.ui-state-command{
+    position: relative;
+    display: block;
+    margin: 1rem 0rem;
+    border-radius: 5px;
+    width: 400px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.253);
+    box-shadow:inset 2px 2px black;
+}
+.ui-state-machine{
+    position: relative;
+    display: block;
+    margin: 1rem 0rem;
+    border-radius: 5px;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:inset 2px 2px black;   
+}
+
