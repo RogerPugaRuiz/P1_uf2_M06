@@ -1,14 +1,14 @@
 
 // if not exist data load client data.
-if (typeof $.cookie('current_session') === 'undefined'){
-    let commands = [];
+if (typeof $.cookie('machines') === 'undefined' && $.cookie('commands') === 'undefined'){
+    var commands = [];
     commands.push(new Command("Ferreterias David","Clavos","C",50,0,0));
     commands.push(new Command("Ferreterias Lucas","Tornillos","C",20,0,1));
     commands.push(new Command("Ferreterias Lucas","Tornillos","A",10,0,2));
 
     console.log(commands);
 
-    let machines = [];
+    var machines = [];
     machines.push(new Machine(0,"A",0));
     machines.push(new Machine(1,"B",0));
     machines.push(new Machine(2,"C",0));
@@ -17,8 +17,21 @@ if (typeof $.cookie('current_session') === 'undefined'){
     console.log(machines);
 
     load(commands, machines);
+
+    
+
 } else {
-    //have cookie
+    
+    $.cookie('commands',JSON.stringify(commands));
+    $.cookie('machines',JSON.stringify(machines));
+    let parCom = JSON.parse($.cookie('commands'));
+    var parMac = JSON.parse($.cookie('machines'));
+
+    console.log($.cookie('machines'));
+    console.log($.cookie('commands'));
+    load(parCom, parMac);
+    
+    
 }
 
 function load(commands, machines){
