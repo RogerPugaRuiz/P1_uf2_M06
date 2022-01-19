@@ -34,6 +34,11 @@ if (typeof $.cookie('machines') === 'undefined' && $.cookie('commands') === 'und
     
 }
 
+/**
+ * Main load function
+ * @param {array commands} commands 
+ * @param {array machines} machines 
+ */
 function load(commands, machines){
     load_commands(commands);
     load_machines(machines);
@@ -49,6 +54,7 @@ function load_commands(commands){
         div.append("<p>" + element.quantity + "</p>");
         div.append("<p class='pos'>" + element.position + "</p>");
         html_command.append(div);
+        html_command.append("<div class='expand'><p>" + element.date_time + "</p><input type='button' value='delete' id='delete'><input type='button' value='finalize' id='finalize'> </div>")
         $(".commands").append(html_command);
     }
 }

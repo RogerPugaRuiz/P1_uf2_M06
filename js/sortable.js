@@ -23,6 +23,7 @@
         });
       },
       stop: function( event, ui ) {
+        
         ui.item.css("box-shadow", "2px 2px black");
         $(".machine").each(function(){
           $(this).css("border","none");
@@ -36,8 +37,9 @@
         let typeMachine = arrayClassNameM[1];
         console.log(typeCommand + " " + typeMachine);
         if (typeCommand != undefined && typeMachine != undefined && typeMachine != typeCommand){
-          $("#sortable1").sortable("cancel");
+          $(this).sortable("cancel");
         }
+        
       },
       placeholder: "ui-state-command"
     }).disableSelection();

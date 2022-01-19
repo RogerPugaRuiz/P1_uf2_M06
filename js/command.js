@@ -13,5 +13,8 @@ class Command{
         this.quantity = quantity;
         this.state = state;
         this.position = position;
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        let today  = new Date();
+        this.date_time = today.toLocaleDateString("es-EU",options);
     }
 }

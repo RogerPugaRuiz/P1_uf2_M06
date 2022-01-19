@@ -91,3 +91,18 @@
     box-shadow:inset 2px 2px black;   
 }
 
+.expand{
+    border-top: 1px solid gray;
+    padding: 0.3rem;
+    display: none;
+    text-align: center;
+}
+
+#delete,#finalize{
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px gray;
+    border-radius: 0.2rem;
+    margin: 0.2rem 1rem;
+}
