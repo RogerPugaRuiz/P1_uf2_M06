@@ -8,7 +8,7 @@
     float: left;
     display: block;
     width: 400px;
-    height: 30rem;
+    height: 40rem;
     overflow-y: scroll;
     border-radius: 1rem;
     direction:rtl;
@@ -19,10 +19,9 @@
     float: right;
     display: block;
     width: 500px;
-    height: 30rem;
+    height: 40rem;
     overflow-y: scroll;
     border-radius: 1rem;
-    scrollbar-width: 20rem;
     scrollbar-width: thin;
     margin: 0.3rem 0;
 }
