@@ -10,7 +10,6 @@
 function right_click() {
     $(document).on("contextmenu", ".command", function (e) {
         $(this).find(".expand").toggle();
-        console.log($(this).find(".expand"));
         return false;
     });
 }

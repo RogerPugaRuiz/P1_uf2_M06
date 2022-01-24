@@ -22,6 +22,10 @@ function reload() {
     view_machines.empty($(".machines"))
     view_machines.to_html($(".machines"));
 
+    // activate view config
+    let view_conf = new View_conf(load_data.get_machines());
+    view_conf.to_html("table");
+
     // activate sortable list
     let sortable_list = new Sortable_list();
     sortable_list.pending_orders();

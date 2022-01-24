@@ -70,7 +70,6 @@ class Sortable_list {
                         load_data.get_pending_order().get_tail().forEach(function (order, i, array) {
                             if (id_html_order == order.get_id()){
                                 order.set_position(index +1 );
-                                console.log(order.get_position());
                             }
                         });
                     });

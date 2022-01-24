@@ -75,7 +75,6 @@ class Tail {
         let sort = [];
         for (let j = 1; j <= this.#tail.length; j++) {
             this.#tail.forEach(function (order, index, array){
-                console.log(order.get_position());
                 if (j == order.get_position()){
                     sort.push(order);
                 }

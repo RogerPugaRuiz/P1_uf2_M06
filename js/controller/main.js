@@ -23,3 +23,8 @@ reload();
 
 // activate right click on orders
 right_click();
+
+// activate order events
+let order_controller = new Order_controller();
+order_controller.delete("#delete");
+order_controller.finalize("#finalize");

@@ -3,6 +3,7 @@
 }
 .configuration table{
     width: 100%;
+    text-align: center;
 }
 .configuration input[type=text]{
     
