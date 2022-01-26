@@ -1,6 +1,5 @@
 /**
  * @description login functions
- * @author Roger Puga Ruiz
  * @data 2022-01-22
  */
 

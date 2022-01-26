@@ -1,6 +1,5 @@
 /**
  * @description all function that use jQuery sortable
- * @author Roger Puga Ruiz
  * @data 2022-01-22
  */
 

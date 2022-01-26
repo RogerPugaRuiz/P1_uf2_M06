@@ -1,7 +1,6 @@
 
 /**
  * @description load class that receives data and loads it into the application model
- * @author Roger Puga Ruiz
  * @date 2022-01-22
  */
 class Load{
@@ -42,6 +41,14 @@ class Load{
 
     get_machines(){
         return this.#machines;
+    }
+
+    set_machines(machines){
+        this.#machines = machines;
+    }
+
+    set_pending_order(pending_order){
+        this.#pending_order = pending_order;
     }
 
     to_string(){

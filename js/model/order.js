@@ -1,7 +1,6 @@
 
 /**
  * @description Order class of machined parts state: 0 -> pending , 1 -> machine 1 , 2 -> machine 2, 3 -> machine 3, 4 -> machine 4. position: order in list.
- * @author Roger Puga Ruiz
  * @data 2022-01-22
  */
 class Order{

@@ -1,7 +1,6 @@
 
 /**
  * @description Machine class in charge of receiving queued orders
- * @author Roger Puga Ruiz
  * @data 2022-01-22
  * @extends Tail
  */

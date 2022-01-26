@@ -1,6 +1,5 @@
 /**
  * @description reload view when change the information
- * @author Roger Puga Ruiz
  * @date 2022-01-22
  */
 
@@ -8,6 +7,10 @@ function reload() {
 
     $("document").unbind("click");
 
+
+    // activate persistent data
+    let persistent = new Persistent();
+    // if cookie exist;
 
     // sort new orders position
     load_data.get_pending_order().sort_tail();
@@ -44,4 +47,7 @@ function reload() {
     let add = machine_controller.add_machine("#add_machine");
     let delete_machine = machine_controller.delete_machine(".delete_machine");
     machine_controller.submit_machine("#submit_machines");
+
+    // save on cookie
+    persistent.set_cookie();
 }

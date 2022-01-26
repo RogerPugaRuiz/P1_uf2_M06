@@ -1,7 +1,6 @@
 
 /**
  * @description pending order model view class
- * @author Roger Puga Ruiz
  * @date 2022-01-22
  */
 class View_pending_orders{

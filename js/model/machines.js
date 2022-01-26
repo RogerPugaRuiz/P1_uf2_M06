@@ -1,7 +1,6 @@
 
 /**
  * @description
- * @author Roger Puga Ruiz
  * @date 2022-01-22
  */
 
