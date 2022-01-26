@@ -28,9 +28,10 @@ class View_pending_orders{
             div.append("<p>" + element.get_quantity() + "</p>");
             div.append("<p class='pos'>" + element.get_position() + "</p>");
             html_order.append(div);
-            html_order.append("<div class='expand'><p>" + element.get_date_time() + "</p><input type='button' value='delete' id='delete'><input type='button' value='finalize' id='finalize'> </div>")
+            html_order.append("<div class='expand'><p>" + element.get_date_time() + "</p><input type='button' value='delete' class='delete'><input type='button' value='finalize' class='finalize'> </div>")
 
-            $(jq_obj).append(html_order);     
+            $(jq_obj).append(html_order); 
+            $(".delete,.finalize").hide();    
         }
     }
 

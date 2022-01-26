@@ -33,6 +33,16 @@ class Machines{
         });
         return result;
     }
+
+    find_by_id(id){
+        let result;
+        this.#machines.forEach(function (machine, index) {
+            if (machine.get_id() == id){
+                result =  machine;
+            }
+        });
+        return result;
+    }
     get_list(){
         return this.#machines;
     }

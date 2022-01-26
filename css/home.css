@@ -97,11 +97,13 @@
     text-align: center;
 }
 
-#delete,#finalize{
+.delete,.finalize{
     background-color: black;
     color: white;
     border: none;
     box-shadow: 1px 1px gray;
     border-radius: 0.2rem;
     margin: 0.2rem 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
 }

@@ -2,9 +2,60 @@
     display: none;
 }
 .configuration table{
-    width: 100%;
+    position: relative;
     text-align: center;
+    color: white;
+    margin: 0.5rem auto;
+}
+.box-table{
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.configuration th{
+    background-color: whitesmoke;
+    color: gray;
+    padding: 1rem;
+    width: 400px;
+}
+.configuration tr:nth-child(odd){
+    background-color: rgb(14, 14, 14);
+}
+.configuration tr:nth-child(even){
+    background-color: rgb(61, 61, 61);
+    
 }
 .configuration input[type=text]{
-    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+.delete_machine{
+    background-color: black;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+}
+
+#add_machine, #submit_machines, #restart{
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px gray;
+    border-radius: 0.2rem;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.configuration select{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
 }

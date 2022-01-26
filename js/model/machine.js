@@ -34,6 +34,10 @@ class Machine extends Tail{
         return this.#type;
     }
 
+    set_type(type){
+        this.#type = type;
+    }
+
     /**
      * @description method to return a string representation that object
      * @returns string

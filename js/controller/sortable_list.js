@@ -73,6 +73,7 @@ class Sortable_list {
                             }
                         });
                     });
+                    
 
                     // reload views
                     reload();
@@ -82,23 +83,6 @@ class Sortable_list {
                 },
                 placeholder: "ui-state-command"
             }).disableSelection();
-        });
-    }
-
-    machines() {
-        $(function () {
-            $("#sortable2").sortable(
-                {
-                    stop: function (event, ui) {
-                        ui.item.css("box-shadow", "2px 2px black");
-                    },
-                    start: function (event, ui) {
-                        ui.item.css("box-shadow", "10px 10px black");
-
-                    },
-                    placeholder: "ui-state-machine"
-                }
-            );
         });
     }
 }

@@ -35,7 +35,13 @@ class View_machines{
             // for all orders in tail machine add order view
             let view_pending_orders = new View_pending_orders(machine);
             view_pending_orders.to_html($(html_machines).find(".box"));
-            
+
+
+            // show buttons delete and finalize
+            $(".machine .delete").show();
+            $(".machine").each( function (index, element){
+                $(element).find(".finalize").first().show();
+            });
         }
     }
     empty(jq_obj){
